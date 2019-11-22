@@ -6,8 +6,9 @@ layout: aaa
 
     <h1 class="my-4">文章摘要</h1>
 
-    <!-- 文章摘要 -->
+  
     <div class="row">
+    {% for post in site.posts %}
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
           <h4 class="card-header">啥也没有</h4>
@@ -15,38 +16,21 @@ layout: aaa
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">点一下</a>
+            <a href="{{site.baseurl}}{{post.url}}" class="btn btn-primary">文章详情</a>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">啥也没有</h4>
-          <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">点一下</a>
-          </div>
-        </div>
+       {% endfor %}
       </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">啥也没有</h4>
-          <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-          </div>
-          <div class="card-footer">
-            <a href="" class="btn btn-primary">点一下</a>
-          </div>
-        </div>
-      </div>
+     
     </div>
   
 
     <!-- 个人介绍 -->
+    <hr>
     <div class="row">
-      <div class="col-lg-6" text-center>
+    <div class="col-lg-2"></div>
+      <div class="col-lg-4 " >
        <h1>这是段子</h1>
        有一天绿豆自杀从5楼跳下来,流了很多血,变成了红豆;一直流脓,又变成了黄豆;伤口结了疤,最后成了黑豆
       </div>
